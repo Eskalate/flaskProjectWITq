@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <meta charset="UTF-8">
+{% extends 'layout.html' %}
+{% block content %}
+<div>
+    <title>Edit user</title>
+    <h2>Edit user</h2>
+    <form method="post" action="/update">
+        <dl>
+            <p>
+                <input name="inputName" value="{{ row['user_name'] }}" type="text" placeholder="Name" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputEmail" value="{{ row['user_email'] }}" type="text" placeholder="Email" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputPassword" value="" type="password" placeholder="password" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+                <input name="id" value="{{ row['user_id'] }}" type="hidden">
+                <input type ="submit" value = "Submit">
+        </p>
+    </form>
+</div>
+{% endblock %}

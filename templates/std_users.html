@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <meta charset="UTF-8">
+{% extends 'std_layout.html' %}
+{% block content %}
+<div>
+    <title>Users grid</title>
+    <p>
+        {%  with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for message in messages %}
+                    <li> {{ message }} </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </p>
+{{ table1 }}
+</div>
+{% endblock %}

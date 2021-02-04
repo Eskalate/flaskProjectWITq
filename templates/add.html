@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <meta charset="UTF-8">
+{% extends 'layout.html' %}
+{% block content %}
+<div>
+    <title>Add User</title>
+    <h2> Add user</h2>
+    <form method="post" action="/add">
+        <dl>
+            <p>
+                <input name="inputName" value="" type="text" placeholder="Name" autocomplete="off" required>
+            </p>
+            <p>
+                <input name="inputEmail" value="" type="text" placeholder="Email" autocomplete="off" required>
+            </p>
+
+            <p>
+                <input name="inputPassword" value="" type="password" placeholder="Password" autocomplete="off" required>
+            </p>
+
+            <p>
+                <input name="inputAdmin" value="" type="number" min='0' max='1' placeholder= '0' autocomplete="off" required>admin(1) or standard(0)
+            </p>
+        </dl>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+    </form>
+</div>
+{% endblock %}
